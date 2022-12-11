@@ -1,0 +1,55 @@
+$bgcolor: rgb(209, 209, 209);
+$textLightColor: rgb(255, 255, 255);
+
+$themeOneColor: #fff;
+$themeOneGrayColor: rgba(0, 0, 0, 0.164);
+
+$buttonHover: rgb(199, 199, 199);
+$buttonActive: rgb(110, 110, 110);
+
+$themeFontSize: 18px;
+
+@mixin center{
+  left:50%;
+  top:50%;
+  @include transform(translate(-50%,-50%));
+}
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+@mixin box_shadow($property) {
+  -webkit-box-shadow: $property;
+  -ms-box-shadow: $property;
+  box-shadow: $property;
+}
+@mixin border_radius($property) {
+  -webkit-border-radius: $property;
+  -ms-border-radius: $property;
+  border-radius: $property;
+}
+@mixin transition($x){
+    transition:all $x;
+    -webkit-transition:all $x !important;
+    -moz-transition:all $x !important;
+    -ms-transition:all $x !important;
+    -o-transition:all $x !important;
+}
+
+@mixin border($position,$px,$color){
+  
+  @if $position == left {
+    border-left:$px solid $color;
+  }
+  @if $position == top{
+    border-top:$px solid $color;
+  }
+  @if $position == bottom{
+    border-bottom:$px solid $color;
+  }
+  @if $position == right {
+    border-right:$px solid $color;
+  }
+
+}

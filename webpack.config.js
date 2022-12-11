@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 
 
-var webpack_config = {
+let webpack_config = {
     entry: path.join(__dirname,'/src/index.jsx'),
     output: {
         path: path.join(__dirname, '/src/dist'),

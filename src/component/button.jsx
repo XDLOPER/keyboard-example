@@ -1,8 +1,9 @@
 import React, { Children } from 'react';
 
+
 const Button = (props) => {
     return (
-        <button>
+        <button className='keyboard_button'>
             { props.children }
         </button>
     );

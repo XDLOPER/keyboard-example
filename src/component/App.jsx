@@ -1,12 +1,19 @@
+const exp = require('../assets/data/buttonData.json').buttonData; 
 import Button from "./button.jsx";
-import '../assets/data/buttonData.json'
+
 
 function App() {
-  
+
   return (
     <>
       <div id='KEYBOARD'>
-        <Button title="ead">adwad</Button>
+        <div className="upper">
+          {
+            exp[0].one.map((value)=>{
+              return <Button>{value.buttonName}</Button>
+            })
+          }
+        </div>
       </div>
     </>
   )
