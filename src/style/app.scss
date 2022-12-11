@@ -1,0 +1,48 @@
+@import './reset';
+
+$bgcolor: rgb(209, 209, 209);
+$themeOneColor: #fff;
+$textcolor: rgb(255, 255, 255);
+$fontsize: 18px;
+
+@mixin center{
+  left:50%;
+  top:50%;
+  @include transform(translate(-50%,-50%));
+}
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+@mixin box_shadow($property) {
+  -webkit-box-shadow: $property;
+  -ms-box-shadow: $property;
+  box-shadow: $property;
+}
+@mixin border_radius($property) {
+  -webkit-border-radius: $property;
+  -ms-border-radius: $property;
+  border-radius: $property;
+}
+
+
+*{box-sizing: border-box;}
+body {
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-size: $fontsize;
+  overflow: hidden;
+}
+
+
+#KEYBOARD{
+  position:absolute;
+  width:95%;
+  height:calc(90vh);
+  background:$themeOneColor;
+  left:50%; top:50%;
+  @include center;
+  @include box_shadow(0px 0px 10px rgb(156, 156, 156));
+  @include border_radius(10px);
+} 
