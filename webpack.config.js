@@ -1,4 +1,7 @@
-require('dotenv').config()
+const webpack = require('webpack'); 
+require('dotenv').config({ path: './.env' })
+
+// plugin import
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
@@ -55,7 +58,10 @@ let webpack_config = {
         open:true,
     },
     plugins: [
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin(),
+        new webpack.DefinePlugin({
+            "process.env": JSON.stringify(process.env)
+        })
     ]
 }
 

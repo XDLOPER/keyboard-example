@@ -1,0 +1,18 @@
+
+
+@mixin themeButtonBackground($code) {
+    @warn $code;
+    @if $code == 'true'{
+        background-color: blue;
+
+    }@else{
+        background-color: red;
+      }
+}
+
+
+.keyboard_button::after{
+    $code: attr(data-theme-code);
+    @warn $code;
+    //@include themeButtonBackground(attr(data-theme-code));
+}

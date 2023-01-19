@@ -1,13 +1,27 @@
-$bgcolor: rgb(209, 209, 209);
-$textLightColor: rgb(255, 255, 255);
 
-$themeOneColor: #fff;
-$themeOneGrayColor: rgba(0, 0, 0, 0.164);
+//page setting
+$textColor: rgb(37, 36, 36);
+$textDarkColor: rgb(255, 255, 255);
+$backgroundLightColor: rgb(255, 255, 255);
+$backgroundDarkColor: rgb(29, 28, 28);
+
+//theme setting
+
+$themeLightColor: #e2e2e2;
+$themeDarkColor: #e2e2e2;
+$boxShadowColor:rgb(204, 204, 204);
+$themeBorderColor:rgb(0, 0, 0);
+$dividerColor:#eee;
+
+//button setting
+$buttonLightColor:transparent;
+$buttonDarkColor:#000;
 
 $buttonHover: rgb(199, 199, 199);
 $buttonActive: rgb(110, 110, 110);
 
-$themeFontSize: 18px;
+$theme_font:'Raleway', sans-serif !important;
+$themeFontSize: 17px;
 
 @mixin center{
   left:50%;
@@ -52,4 +66,8 @@ $themeFontSize: 18px;
     border-right:$px solid $color;
   }
 
+}
+
+:export{
+  buttonActive: $buttonActive;
 }

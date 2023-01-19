@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "build": "webpack && webpack-dev-server"
+    "build": "webpack && webpack-dev-server",
+    "safari": "webpack && webpack-dev-server --host 0.0.0.0 --port 3000"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",
+    "react-icons": "^4.7.1",
     "style-loader": "^3.3.1"
   },
   "devDependencies": {
